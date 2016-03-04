@@ -13,6 +13,10 @@
 		D94EAC121C89560900A18633 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94EAC101C89560900A18633 /* Main.storyboard */; };
 		D94EAC141C89560900A18633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94EAC131C89560900A18633 /* Assets.xcassets */; };
 		D94EAC171C89560900A18633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94EAC151C89560900A18633 /* LaunchScreen.storyboard */; };
+		D94EAC201C89565700A18633 /* YMQCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = D94EAC1F1C89565700A18633 /* YMQCarouselView.m */; };
+		D94EAC231C89591900A18633 /* YMQPosterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D94EAC221C89591900A18633 /* YMQPosterView.m */; };
+		D94EAC271C895C6100A18633 /* YMQPosterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D94EAC251C895C6100A18633 /* YMQPosterCell.m */; };
+		D94EAC281C895C6100A18633 /* YMQPosterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94EAC261C895C6100A18633 /* YMQPosterCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		D94EAC131C89560900A18633 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D94EAC161C89560900A18633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D94EAC181C89560900A18633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D94EAC1E1C89565700A18633 /* YMQCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMQCarouselView.h; sourceTree = "<group>"; };
+		D94EAC1F1C89565700A18633 /* YMQCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMQCarouselView.m; sourceTree = "<group>"; };
+		D94EAC211C89591900A18633 /* YMQPosterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMQPosterView.h; sourceTree = "<group>"; };
+		D94EAC221C89591900A18633 /* YMQPosterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMQPosterView.m; sourceTree = "<group>"; };
+		D94EAC241C895C6100A18633 /* YMQPosterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMQPosterCell.h; sourceTree = "<group>"; };
+		D94EAC251C895C6100A18633 /* YMQPosterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMQPosterCell.m; sourceTree = "<group>"; };
+		D94EAC261C895C6100A18633 /* YMQPosterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMQPosterCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +74,13 @@
 				D94EAC0D1C89560900A18633 /* ViewController.h */,
 				D94EAC0E1C89560900A18633 /* ViewController.m */,
 				D94EAC101C89560900A18633 /* Main.storyboard */,
+				D94EAC1E1C89565700A18633 /* YMQCarouselView.h */,
+				D94EAC1F1C89565700A18633 /* YMQCarouselView.m */,
+				D94EAC211C89591900A18633 /* YMQPosterView.h */,
+				D94EAC221C89591900A18633 /* YMQPosterView.m */,
+				D94EAC241C895C6100A18633 /* YMQPosterCell.h */,
+				D94EAC251C895C6100A18633 /* YMQPosterCell.m */,
+				D94EAC261C895C6100A18633 /* YMQPosterCell.xib */,
 				D94EAC131C89560900A18633 /* Assets.xcassets */,
 				D94EAC151C89560900A18633 /* LaunchScreen.storyboard */,
 				D94EAC181C89560900A18633 /* Info.plist */,
@@ -138,6 +156,7 @@
 			files = (
 				D94EAC171C89560900A18633 /* LaunchScreen.storyboard in Resources */,
 				D94EAC141C89560900A18633 /* Assets.xcassets in Resources */,
+				D94EAC281C895C6100A18633 /* YMQPosterCell.xib in Resources */,
 				D94EAC121C89560900A18633 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,9 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94EAC271C895C6100A18633 /* YMQPosterCell.m in Sources */,
+				D94EAC201C89565700A18633 /* YMQCarouselView.m in Sources */,
 				D94EAC0F1C89560900A18633 /* ViewController.m in Sources */,
 				D94EAC0C1C89560900A18633 /* AppDelegate.m in Sources */,
 				D94EAC091C89560900A18633 /* main.m in Sources */,
+				D94EAC231C89591900A18633 /* YMQPosterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +320,7 @@
 				D94EAC1D1C89560900A18633 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
