@@ -29,6 +29,9 @@
                     <constraint firstAttribute="bottom" secondItem="Ehd-YV-oNm" secondAttribute="bottom" id="qu3-Xn-z8D"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="contentImage" destination="Ehd-YV-oNm" id="PCw-LI-FHg"/>
+            </connections>
             <point key="canvasLocation" x="354.5" y="292.5"/>
         </tableViewCell>
     </objects>

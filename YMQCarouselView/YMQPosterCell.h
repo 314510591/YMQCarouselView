@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface YMQPosterCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *contentImage;
 
 @end

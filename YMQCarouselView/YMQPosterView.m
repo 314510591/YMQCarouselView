@@ -7,6 +7,7 @@
 //
 
 #import "YMQPosterView.h"
+#import "YMQPosterCell.h"
 
 #define POSTERWIDTH 189.0
 #define POSTERHEIGHT 303.0
@@ -45,7 +46,8 @@
     self.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     self.transform = CGAffineTransformMakeRotation(-M_PI / 2);
     self.decelerationRate = 0;
-    [self registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
+//    [self registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
+    [self registerNib:[UINib nibWithNibName:@"YMQPosterCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"YMQPosterCell"];
     
     
 }
@@ -92,18 +94,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellID = @"cellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    YMQPosterCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YMQPosterCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.transform = CGAffineTransformMakeRotation(M_PI / 2);
     
-    UIImageView *imageView = [cell viewWithTag:4];
-    if (!imageView)
-    {
-        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.frame.size.height)];
-        imageView.tag = 4;
-        [cell addSubview:imageView];
-    }
+//    UIImageView *imageView = [cell viewWithTag:4];
+//    if (!imageView)
+//    {
+//        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.frame.size.height)];
+//        imageView.tag = 4;
+//        [cell addSubview:imageView];
+//    }
     
     NSInteger page = 0;
     if (indexPath.row == 0)
@@ -127,9 +128,9 @@
         page = indexPath.row - 1;
     }
     
-    cell.textLabel.text = _dataArray[page - 1];
+//    cell.textLabel.text = _dataArray[page - 1];
     
-    cell.backgroundColor = [UIColor colorWithRed:page * 20 / 255.0 green:page * 20 / 255.0 blue:page * 20 / 255.0 alpha:1];
+    cell.contentImage.backgroundColor = [UIColor colorWithRed:page * 20 / 255.0 green:page * 20 / 255.0 blue:page * 20 / 255.0 alpha:1];
     
     //    [imageView sd_setImageWithURL:[self.dataArray objectAtIndex:(page - 1)] placeholderImage:[UIImage imageNamed:@"placeholder.png"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
     //        if (error != nil) {
