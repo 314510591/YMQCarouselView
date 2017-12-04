@@ -40,10 +40,15 @@
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
-    self.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    self.bounds = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     self.transform = CGAffineTransformMakeRotation(-M_PI / 2);
     [self registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
     self.pagingEnabled = YES;
+    
+    self.estimatedRowHeight = 0;
+    self.estimatedSectionHeaderHeight = 0;
+    self.estimatedSectionFooterHeight = 0;
+    
 
 }
 
@@ -60,6 +65,9 @@
         offsetX = 0;
     }
     [self setContentOffset:CGPointMake(0 ,offsetX)];
+
+    
+    
 }
 
 - (void)layoutSubviews

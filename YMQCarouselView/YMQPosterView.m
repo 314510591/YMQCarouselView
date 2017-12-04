@@ -43,7 +43,7 @@
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
-    self.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    self.bounds = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     self.transform = CGAffineTransformMakeRotation(-M_PI / 2);
     self.decelerationRate = 0;
 //    [self registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
